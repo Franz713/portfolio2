@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franz Daniel Arreo - Software Engineer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header id="header">
+    <a href="#home" class="logo">Franz Daniel Arreo.</a>
+
+    <div class="nav-container">
+      <ul class="navmenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="home">
+    <div class="home-text">
+      <h2>Hello I'm Franz <span class="wave">👋</span></h2>
+      <h3>Software Engineer</h3>
+
+      <div class="home-btn">
+        <a href="#projects" class="btn">View my work</a>
+      </div>
+    </div>
+
+    <div class="home-img">
+      <img src="me.jpg" alt="Franz Daniel Arreo - Software Engineer" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-card">
+          <div class="about-header">
+            <h3>I'm a passionate Software Engineer</h3>
+            <button class="edit-btn" id="editAboutBtn" onclick="toggleEditMode()">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+          </div>
+          <div class="about-description">
+            <p id="aboutText" class="editable-content">With a strong foundation in software development and a passion for creating innovative solutions, I specialize in building scalable applications and systems using modern technologies. Based in Bayugan City, Agusan del Sur, I'm dedicated to continuous learning and delivering robust, efficient, and user-friendly software solutions that solve real-world problems and make a positive impact.</p>
+            <textarea id="aboutTextEditor" class="content-editor" style="display: none;">With a strong foundation in software development and a passion for creating innovative solutions, I specialize in building scalable applications and systems using modern technologies. Based in Bayugan City, Agusan del Sur, I'm dedicated to continuous learning and delivering robust, efficient, and user-friendly software solutions that solve real-world problems and make a positive impact.</textarea>
+          </div>
+          <div class="edit-actions" id="editActions" style="display: none;">
+            <button class="save-btn" onclick="saveChanges()">
+              <i class="fas fa-save"></i> Save
+            </button>
+            <button class="cancel-btn" onclick="cancelEdit()">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & Technologies</h2>
+        <div class="section-line"></div>
+        <p>Here are the technologies and tools I work with to create amazing software solutions</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <i class="fab fa-html5"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js-square"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <i class="fab fa-php"></i>
+              <span>PHP</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-cuttlefish"></i>
+              <span>C</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & Others</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Responsive Design</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i>
+              <span>Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <div class="section-line"></div>
+        <p>Here are some of my recent projects that showcase my skills and creativity in software development and building user-friendly applications</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-item">
+          <div class="project-image">
+            <img src="PortfolioV1.png" alt="My First Portfolio Design" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>My First Portfolio Design</h3>
+            <p>This was my very first portfolio project where I showcased my skills in HTML and CSS. It features a simple, clean design with sections for home, about, skills, projects, and contact. Creating this project helped me build a strong foundation in front-end development and practice designing user-friendly layouts.</p>
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item reverse">
+          <div class="project-image">
+            <img src="Project1.png" alt="My First Restaurant Website" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>Vigilatte Coffee House</h3>
+            <p>This was my second project, a simple coffee shop website built using HTML and CSS. It features a clean design where users can browse the menu and place orders online. The project helped me practice structuring web pages and styling them to create an appealing and user-friendly restaurant site.</p>
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-image">
+            <img src="Project2.png" alt="Farmers MeetTrack" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>Farmers MeetTrack</h3>
+            <p>Our CSC106 project is a QR code-based attendance system for farmers' meetings. It allows scanning of QR codes for attendance, generates reports, and automatically computes fines for absentees. Built with PHP and MySQL, it includes user authentication, database management, and real-time tracking for efficient monitoring.</p>
+            <div class="tech-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Information</h2>
+        <div class="section-line"></div>
+        <p>I'm open for any suggestion or just to have a chat</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Address</h3>
+            <p>Bayugan City, Agusan del Sur</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <p>+63920-137-4930</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p><a href="mailto:fdarreo@gmail.com">fdarreo@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="footer-logo">Franz Daniel Arreo.</a>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/franzdaniel.arreo" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/franz-daniel-arreo-91013432a/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Franz713" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025 - Portfolio - Franz Daniel Arreo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
